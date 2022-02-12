@@ -35,5 +35,15 @@ class HelloApiView(APIView):
                 status = status.HTTP_400_BAD_REQUEST
                 )
         
+    def put(self,request, pk=None):
+        """Actualiza un objeto"""
+        return Response({'method': 'PUT'})
+    
+    def path(self, request,pk=None):
+        """Actualizacion parcial del objeto"""
+        return Response({'method': 'PATCH'})
         
-        
+     
+    def delete(self, request,pk=None):
+        """Eliminacion del objeto"""
+        return Response({'method': 'DELETE'})
